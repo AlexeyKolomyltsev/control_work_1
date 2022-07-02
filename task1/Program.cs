@@ -7,7 +7,7 @@ void PrintArr(string[] arrayforprint) ///метод печати массива
     Console.WriteLine();
 }
 
-int CountArray(string[] arrayforcount) /// метод подсчета количества элементов с длиной меньше 4
+int CountElementsLessFour(string[] arrayforcount) /// метод подсчета количества элементов с длиной меньше 4
 {
     int count = 0;
     foreach (string element in arrayforcount) if (element.Length < 4) count++;
@@ -16,8 +16,8 @@ int CountArray(string[] arrayforcount) /// метод подсчета коли�
 
 string[] ModifyArray(string[] arrayformodify) /// метод, формирующий новый массив с длиной элементов меньше 4
 {
-    int len = CountArray(arrayformodify);
-    string[] newArray = new string[len];
+    int len = CountElementsLessFour(arrayformodify);  //длина нового массива равна количеству 
+    string[] newArray = new string[len];              //элементов исходного массива с длиной меньше 4
     if (len == 0) return newArray;
     else
     {
